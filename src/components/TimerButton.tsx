@@ -4,7 +4,7 @@ export default function TimerButton({
   return (
     <button
       onClick={() => addTimer(name, seconds)}
-      className={`px-4 py-2 rounded ${bgColor} text-white`
+      className={`px-4 rounded ${bgColor} text-white text-center h-8 leading-8`
       }
     > {name}{seconds}s</button >
   )

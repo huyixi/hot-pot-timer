@@ -13,18 +13,21 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="h-screen grid grid-rows-12 gap-4 mx-auto p-4">
 
-      {timers.map((timer, index) => (
-        <CountdownTimer key={index} name={timer.name} duration={timer.duration} />
-      ))}
+      <div className="row-span-full col-span-full mb-auto">
+        {timers.map((timer, index) => (
+          <CountdownTimer key={index} name={timer.name} duration={timer.duration} />
+        ))}
 
-      <div className="flex space-x-2 mb-4">
+      </div>
+
+      <div className="flex space-x-2 mb-4 row-start-10 col-span-full ">
         <TimerButton name={'毛肚'} seconds={15} addTimer={addTimer} bgColor="bg-blue-500"></TimerButton>
         <TimerButton name={'牛肉'} seconds={10} addTimer={addTimer} bgColor="bg-blue-500"></TimerButton>
         <TimerButton name={'菌菇'} seconds={2} addTimer={addTimer} bgColor="bg-blue-500"></TimerButton>
       </div>
-      <TimerForm addTimer={addTimer} />
+      <TimerForm addTimer={addTimer} className='row-start-12 col-span-full' />
     </div>
   );
 }
