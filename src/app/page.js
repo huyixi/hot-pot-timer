@@ -2,6 +2,7 @@
 
 import CountdownTimer from "@/components/CountdownTimer"
 import TimerButton from "@/components/TimerButton";
+import TimerForm from "@/components/Timerform";
 
 import React, { useState, useEffect } from 'react';
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
         <TimerButton name={'牛肉'} seconds={10} addTimer={addTimer} bgColor="bg-blue-500"></TimerButton>
         <TimerButton name={'菌菇'} seconds={2} addTimer={addTimer} bgColor="bg-blue-500"></TimerButton>
       </div>
+      <TimerForm addTimer={addTimer} />
     </div>
   );
 }
